@@ -6,8 +6,8 @@
 #
 ####
 set(SOURCE_FILES
-  "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}Ai.xml"
-  "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}{{cookiecutter.component_explicit_common}}{{cookiecutter.component_suffix}}.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}Ai.xml"
+    "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}{{cookiecutter.component_explicit_common}}{{cookiecutter.component_suffix}}.cpp"
 )
 
 # Determine the platform specific source files to append:
