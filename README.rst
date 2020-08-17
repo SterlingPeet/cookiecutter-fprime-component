@@ -114,7 +114,7 @@ You will be asked for these fields:
     * - ``license``
       - .. code:: python
 
-            "MIT license"
+            "None"
       - License to use. Available options:
 
         * None (no license text, assume project level license)
