@@ -1,4 +1,4 @@
-#  Component
+# {{cookiecutter.component_name}} Component
 
 ## 1. Introduction
 
