@@ -6,8 +6,8 @@
 #
 ####
 set(SOURCE_FILES
-    "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}Ai.xml"
-    "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}{{cookiecutter.component_explicit_common}}{{cookiecutter.component_suffix}}.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_slug}}ComponentAi.xml"
+    "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}{{cookiecutter.component_explicit_common}}{{cookiecutter.component_impl_suffix}}.cpp"
 )
 
 # Determine the platform specific source files to append:
@@ -15,25 +15,25 @@ string(TOLOWER "${CMAKE_SYSTEM_NAME}" CMAKE_SYSTEM_NAME_LOWER)
 
 # Arduino additions
 if(${CMAKE_SYSTEM_NAME_LOWER} STREQUAL "arduino")
-    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}Arduino{{cookiecutter.component_suffix}}.cpp")
+    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}AVR{{cookiecutter.component_impl_suffix}}.cpp")
 # AVR platform additions
 elseif(${CMAKE_SYSTEM_NAME_LOWER} STREQUAL "avr")
-    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}AVR{{cookiecutter.component_suffix}}.cpp")
+    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}AVR{{cookiecutter.component_impl_suffix}}.cpp")
 # CygWin platform additions
 elseif(${CMAKE_SYSTEM_NAME_LOWER} STREQUAL "cygwin")
-    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}CygWin{{cookiecutter.component_suffix}}.cpp")
+    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}CygWin{{cookiecutter.component_impl_suffix}}.cpp")
 # Darwin platform additions
 elseif(${CMAKE_SYSTEM_NAME_LOWER} STREQUAL "darwin")
-    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}Darwin{{cookiecutter.component_suffix}}.cpp")
+    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}Darwin{{cookiecutter.component_impl_suffix}}.cpp")
 # Raspberry Pi platform additions
 elseif(${CMAKE_SYSTEM_NAME_LOWER} STREQUAL "arm-linux-gnueabihf")
-    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}RPi{{cookiecutter.component_suffix}}.cpp")
+    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}RPi{{cookiecutter.component_impl_suffix}}.cpp")
 # VxWorks platform additions
 elseif(${CMAKE_SYSTEM_NAME_LOWER} STREQUAL "vxworks")
-    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}VxWorks{{cookiecutter.component_suffix}}.cpp")
+    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}VxWorks{{cookiecutter.component_impl_suffix}}.cpp")
 # Otherwise, assume Linux-compatible build
 else()
-    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_class_name}}Linux{{cookiecutter.component_suffix}}.cpp")
+    list(APPEND SOURCE_FILES "${CMAKE_CURRENT_LIST_DIR}/{{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}Linux{{cookiecutter.component_impl_suffix}}.cpp")
 endif()
 
 # Uncomment and add any modules that this component depends on, else

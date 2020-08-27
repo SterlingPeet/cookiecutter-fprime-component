@@ -67,19 +67,25 @@ You will be asked for these fields:
       - .. code:: python
 
             "My Example"
-      - The printed name of this component for documentation and strings.  It should be concise and convey the purpose of the component.
+      - The printed name of this component for documentation and strings.  It should be concise and convey the purpose of the component, but also complete.
 
-    * - ``short_description``
+    * - ``component_short_description``
       - .. code:: python
 
             "An example component [...]"
-      - One line description of the project (used in headers and comments).
+      - One line description of the project (used in headers and comments).  This should describe the purpose of the component in the Imperetive Voice, not the context where the component is used.
 
-    * - ``component_class_name``
+    * - ``component_slug``
       - .. code:: python
 
-            "MyExampleComponent"
-      - The name of this component's class in the code.  It should be ``CamelCase``.  The autocoder requires the suffix ``Component`` to function properly.
+            "MyExample"
+      - A slug_ is a simplified version of the ``component_name``, which will be used for the class name and file names within the component folder structure.  It should be ``CamelCase``.
+
+    * - ``component_explicit_component_suffix``
+      - .. code:: python
+
+            "Component"
+      - The general convention is for F Prime components to have the ``Component`` suffix for file names and class names.  While it is not required, the Autocoder will assume this format, and Autocoder provided templates may be more difficult to adapt if this is not selected.
 
     * - ``component_explicit_common``
       - .. code:: python
@@ -87,17 +93,17 @@ You will be asked for these fields:
             ""
       - If preferred, the cpp file with the common implementation code can be appended with the suffix ``Common``.
 
-    * - ``component_suffix``
+    * - ``component_impl_suffix``
       - .. code:: python
 
-            ""
-      - If preferred, the files and classes can be appended with the suffix ``Impl``.
+            "Impl"
+      - The general convention is for F Prime components to have the ``Impl`` suffix for file names and class names.  While it is not required, the Autocoder will assume this format, and Autocoder provided templates may be more difficult to adapt if this is not selected.
 
     * - ``component_path``
       - .. code:: python
 
             "Prjct/Grp"
-      - This is the path from the F Prime root to the current directory, not including the component's folder.
+      - This is the path from the F Prime root to the current directory, not including the component's folder.  Do not add a ``/`` to the front or back of the path.
 
     * - ``component_namespace``
       - .. code:: python
@@ -109,7 +115,7 @@ You will be asked for these fields:
       - .. code:: python
 
             "active"
-      - You can choose and active or passive component type.  If you change your mind, is it set in the Autocoder input file.
+      - You can choose and active or passive component type.  If you change your mind, is it set in the Autocoder input file (and some of the component's port kinds may also affected).
 
     * - ``license``
       - .. code:: python
@@ -137,7 +143,7 @@ Then you need to (possibly purge) and generate the new cmake config in that depl
 Now you can edit your ``MyExampleComponentAi.xml`` file define the component to your liking, and generate the implementation boilerplate::
 
   cd MyExample
-  fprime-util impl -b {path/to/your/deployment}
+  fprime-util impl -b {path/to/your/deployment}/build-fprime-automatic-default
 
 Next, copy the ``-template`` code contents into your ``.hpp`` and ``.cpp`` files.
 Try not to overwrite the freshly generated comments at the top!
@@ -150,3 +156,4 @@ See `CHANGELOG.rst <https://github.com/SterlingPeet/cookiecutter-fprime-componen
 
 .. _Cookiecutter: https://github.gatech.edu/audreyr/cookiecutter
 .. _F Prime: https://github.com/nasa/fprime/
+.. _slug: https://stackoverflow.com/questions/4230846/what-is-the-etymology-of-slug

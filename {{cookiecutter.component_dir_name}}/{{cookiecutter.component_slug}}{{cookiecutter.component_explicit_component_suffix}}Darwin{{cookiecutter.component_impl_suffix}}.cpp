@@ -1,5 +1,5 @@
 // ======================================================================
-// \title  {{cookiecutter.component_class_name}}{{cookiecutter.component_explicit_common}}{{cookiecutter.component_suffix}}.cpp
+// \title  {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}Darwin{{cookiecutter.component_impl_suffix}}.cpp
 // \author {{cookiecutter.full_name}} <{{cookiecutter.email}}>
-// \brief  {{cookiecutter.short_description}}
+// \brief  {{cookiecutter.component_short_description}}
 // ======================================================================

@@ -41,7 +41,7 @@ if __name__ == "__main__":
 ################################################################################
 ################################################################################
 
-    You have succesfully created the `{{ cookiecutter.component_name }}` component.
+    You have succesfully created the `{{ cookiecutter.component_slug }}` component.
 
 ################################################################################
 
@@ -66,12 +66,12 @@ if __name__ == "__main__":
 
         fprime-util generate
 
-    Now you can edit your {{ cookiecutter.component_class_name }}Ai.xml file
+    Now you can edit your {{ cookiecutter.component_slug }}Ai.xml file
     define the component to your liking, and generate the implementation
     boilerplate:
 
         cd {{ cookiecutter.component_dir_name }}
-        fprime-util impl -b {path/to/your/deployment}
+        fprime-util impl -b {path/to/your/deployment}/build-fprime-automatic-default
 
     Next, copy the `-template` code contents into your .hpp and .cpp files.
     Try not to overwrite the freshly generated comments at the top!

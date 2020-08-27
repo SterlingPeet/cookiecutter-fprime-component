@@ -7,17 +7,17 @@
 # There are some standard files that are included for reference
 
 
-SRC = {{cookiecutter.component_class_name}}Ai.xml \
-      {{cookiecutter.component_class_name}}{{cookiecutter.component_suffix}}.cpp
+SRC = {{cookiecutter.component_slug}}Ai.xml \
+      {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}{{cookiecutter.component_explicit_common}}{{cookiecutter.component_impl_suffix}}.cpp
 
-SRC_LINUX = {{cookiecutter.component_class_name}}Linux{{cookiecutter.component_suffix}}.cpp
+SRC_LINUX = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}Linux{{cookiecutter.component_impl_suffix}}.cpp
 
-SRC_CYGWIN = {{cookiecutter.component_class_name}}Linux{{cookiecutter.component_suffix}}.cpp
+SRC_CYGWIN = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}CygWin{{cookiecutter.component_impl_suffix}}.cpp
 
-SRC_DARWIN = {{cookiecutter.component_class_name}}Linux{{cookiecutter.component_suffix}}.cpp
+SRC_DARWIN = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}Darwin{{cookiecutter.component_impl_suffix}}.cpp
 
-SRC_RASPIAN = {{cookiecutter.component_class_name}}Linux{{cookiecutter.component_suffix}}.cpp
+SRC_RASPIAN = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}Linux{{cookiecutter.component_impl_suffix}}.cpp
 
-HDR = {{cookiecutter.component_class_name}}{{cookiecutter.component_suffix}}.hpp
+HDR = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}{{cookiecutter.component_impl_suffix}}.hpp
 
 SUBDIRS =
