@@ -7,9 +7,9 @@
 # There are some standard files that are included for reference
 
 
-SRC = {{cookiecutter.component_slug}}Ai.xml \
+SRC = {{cookiecutter.component_slug}}ComponentAi.xml \
       {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}{{cookiecutter.component_explicit_common}}{{cookiecutter.component_impl_suffix}}.cpp
-
+{% if cookiecutter.component_multiplatform_support == "yes" %}
 SRC_LINUX = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}Linux{{cookiecutter.component_impl_suffix}}.cpp
 
 SRC_CYGWIN = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}CygWin{{cookiecutter.component_impl_suffix}}.cpp
@@ -17,7 +17,7 @@ SRC_CYGWIN = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_co
 SRC_DARWIN = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}Darwin{{cookiecutter.component_impl_suffix}}.cpp
 
 SRC_RASPIAN = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}Linux{{cookiecutter.component_impl_suffix}}.cpp
-
+{% endif %}
 HDR = {{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}{{cookiecutter.component_impl_suffix}}.hpp
 
 SUBDIRS =

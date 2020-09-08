@@ -117,6 +117,12 @@ You will be asked for these fields:
             "active"
       - You can choose and active or passive component type.  If you change your mind, is it set in the Autocoder input file (and some of the component's port kinds may also affected).
 
+    * - ``component_multiplatform_support``
+      - .. code:: python
+
+            "no"
+      - If you need different implementations of your component based on the target platform, choose ``yes`` to get additional support file templates.
+
     * - ``license``
       - .. code:: python
 

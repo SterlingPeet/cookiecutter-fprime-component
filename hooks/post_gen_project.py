@@ -1,7 +1,7 @@
 from __future__ import print_function
 
 import datetime
-# import os
+import os
 # import shutil
 # import subprocess
 # import sys
@@ -27,6 +27,14 @@ if __name__ == "__main__":
     today = datetime.date.today()
     # replace_contents('CHANGELOG.rst', '<TODAY>', today.strftime("%Y-%m-%d"))
     replace_contents(join('docs', 'sdd.md'), '<TODAY>', today.strftime("%m/%d/%Y"))
+
+{% if cookiecutter.component_multiplatform_support == "no" %}
+    # {{cookiecutter.component_dir_name}}/
+    mp_str = '{{cookiecutter.component_slug}}{{cookiecutter.component_explicit_component_suffix}}{}{{cookiecutter.component_impl_suffix}}.cpp'
+    rm_list = ['Arduino', 'AVR', 'CygWin', 'Linux', 'Darwin', 'RPi', 'VxWorks']
+    for i in rm_list:
+        os.unlink(mp_str.format(i))
+{% endif %}
 
 # /{/% if cookiecutter.sphinx_docs == "no" %}
 #     shutil.rmtree('docs')
