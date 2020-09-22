@@ -3,7 +3,7 @@
     "email": "noreply@nospam.com",
     "component_name": "My Example",
     "component_short_description": "Example Component for F Prime FSW framework.",
-    "component_slug": "{{ cookiecutter.component_name|replace(' ','')|replace('-','')|replace('_','') }}",
+    "component_slug": "{{ cookiecutter.component_name|slugify(separator='', lowercase=False) }}",
     "component_dir_name": "{{ cookiecutter.component_slug }}",
     "component_explicit_component_suffix": ["Component", ""],
     "component_explicit_common": ["", "Common"],

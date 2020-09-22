@@ -1,4 +1,4 @@
-# {{cookiecutter.component_name}} Component Dictionary
+# {{cookiecutter.component_slug}} Component Dictionary
 
 
 ## Command List
