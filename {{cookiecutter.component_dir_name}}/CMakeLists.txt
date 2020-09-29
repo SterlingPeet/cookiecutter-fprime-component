@@ -58,7 +58,7 @@ endif()
 # they might not be available when cmake tries to build this component.
 
 # set(MOD_DEPS
-#   Fw/Logger
+#     Fw/Logger
 # )
 
 register_fprime_module()
