@@ -79,7 +79,13 @@ You will be asked for these fields:
       - .. code:: python
 
             "MyExample"
-      - A slug_ is a simplified version of the ``component_name``, which will be used for the class name and file names within the component folder structure.  It should be ``CamelCase``.
+      - A slug_ is a simplified version of the ``component_name``, which will be used for the class name and file names within the component folder structure.  It should be ``TitleCase`` with no spaces or special characters.
+
+    * - ``component_dir_name``
+      - .. code:: python
+
+            "MyExample"
+      - This is the name of the component's main directory.  The obvious choice is to use your ``deployment_slug`` for this field.
 
     * - ``component_explicit_component_suffix``
       - .. code:: python
@@ -104,6 +110,12 @@ You will be asked for these fields:
 
             "Prjct/Grp"
       - This is the path from the F Prime root to the current directory, not including the component's folder.  Do not add a ``/`` to the front or back of the path.
+
+    * - ``component_path_to_fprime_root``
+      - .. code:: python
+
+            "../.."
+      - This is the path from the current directory to the F Prime root, not including the components's folder.  Do not add a ``/`` to the front or back of the path.
 
     * - ``component_namespace``
       - .. code:: python

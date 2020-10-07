@@ -9,6 +9,7 @@
     "component_explicit_common": ["", "Common"],
     "component_impl_suffix": ["Impl", ""],
     "component_path": "Prjct/Grp",
+    "component_path_to_fprime_root": "../..",
     "component_namespace": "{{ cookiecutter.component_path|replace('/','::')|replace('\\\\','::') }}",
     "component_kind": ["active", "passive"],
     "component_multiplatform_support": ["no", "yes"],
